@@ -3,6 +3,7 @@
 export QEMU_NCPU=$1
 export QEMU_MEM=$2
 export QEMU_TIMEOUT=$3
+export SALUS_ROOT=$GITHUB_WORKSPACE/salus
 
 if /opt/scripts/overwatch.py
 then
