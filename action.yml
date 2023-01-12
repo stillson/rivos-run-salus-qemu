@@ -1,0 +1,26 @@
+# action.yml
+name: 'run salus'
+description: 'run salus under qemu'
+inputs:
+  qemu-ncpu:
+    description: 'number of cpus'
+    required: false
+    default: '4'
+  qemu-mem:
+    description: 'memory for dut'
+    required: false
+    default: '2048'
+  qemu-timeout:
+    description: 'how long before aborting run, in seconds'
+    required: false
+    default: '300'
+outputs:
+  result:
+    description: 'Pass or Fail'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.qemu-ncpu }}
+    - ${{ inputs.qemu-mem }}
+    - ${{ inputs.qemu-timeout }}
