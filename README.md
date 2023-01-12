@@ -24,7 +24,9 @@ Pass or Fail.
 
 ## Example usage
 
+```
 uses: actions/rivos-run-salus-qemu@v1
 with:
   qemu-ncpu: '1'
   qemu-timeout: '240'
+```
