@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/bash -x
 
 export QEMU_NCPU=$1
 export QEMU_MEM=$2
 export QEMU_TIMEOUT=$3
-export SALUS_ROOTDIR=$GITHUB_WORKSPACE/salus
+export SALUS_ROOTDIR=$GITHUB_WORKSPACE
 
 if /opt/scripts/overwatch.py
 then
