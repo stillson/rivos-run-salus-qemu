@@ -5,6 +5,8 @@ export QEMU_MEM=$2
 export QEMU_TIMEOUT=$3
 export SALUS_ROOTDIR=$GITHUB_WORKSPACE
 
+which  riscv64-unknown-elf-objcopy
+
 if /opt/scripts/overwatch.py
 then
 echo "result=Pass" >> $GITHUB_OUTPUT
